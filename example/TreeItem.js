@@ -107,10 +107,11 @@ TreeItem.prototype = {
         // 2018.2.14 Select the next current item after removing the current item
         if(currentSelectionFlag === SF_Current){
             if(this.subNodes.length > 0){
-                if(i >= this.subNodes.length){
-                    i = this.subNodes.length - 1;
+                var nextCurrent = i;
+                if(nextCurrent >= this.subNodes.length){
+                    nextCurrent = this.subNodes.length - 1;
                 }
-                this.subNodes[i].setSelectionFlag(SF_Current);
+                this.subNodes[nextCurrent].setSelectionFlag(SF_Current);
             }else{
                 if(this.itemID !== rootItem.itemID) this.setSelectionFlag(SF_Current);
             }
