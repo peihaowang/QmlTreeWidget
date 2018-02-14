@@ -1,0 +1,22 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>TreeWidget.qml</file>
+        <file>TreeItem.js</file>
+        <file>btn_expand@2x.png</file>
+        <file>btn_collapse@2x.png</file>
+        <file>btn_collapse.png</file>
+        <file>btn_expand.png</file>
+        <file>ico_item@2x.png</file>
+        <file>+touch/main.qml</file>
+        <file>+touch/btn_collapse.png</file>
+        <file>+touch/btn_collapse@2x.png</file>
+        <file>+touch/btn_expand.png</file>
+        <file>+touch/btn_expand@2x.png</file>
+        <file>+touch/ico_item.png</file>
+        <file>+touch/ico_item@2x.png</file>
+        <file>+touch/TreeItem.js</file>
+        <file>+touch/TreeWidget.qml</file>
+        <file>ico_item.png</file>
+    </qresource>
+</RCC>
