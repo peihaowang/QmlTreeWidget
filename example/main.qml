@@ -22,8 +22,8 @@ ApplicationWindow {
             font.family = "Monaco";
             font.pointSize = 16;
 
-            var topItem1 = createItem("Item 1", iconName)
-            topItem1.setSelectionFlag(selectionCurrent)
+            var topItem1 = createItem("Item 1", iconName);
+            topItem1.setSelectionFlag(selectionCurrent);
             addTopLevelItem(topItem1);
 
             topItem1.appendChild(createItem("Child 1", iconName));

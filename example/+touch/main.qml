@@ -17,8 +17,8 @@ ApplicationWindow {
             iconSize = (Qt.size(20, 20));
             font.pointSize = 30
 
-            var topItem1 = createItem("Item 1", "ico_item.png")
-            topItem1.setSelectionFlag(selectionCurrent)
+            var topItem1 = createItem("Item 1", "ico_item.png");
+            topItem1.setSelectionFlag(selectionCurrent);
             addTopLevelItem(topItem1);
 
             topItem1.appendChild(createItem("Child 1", "ico_item.png"));

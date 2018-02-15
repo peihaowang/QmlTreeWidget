@@ -9,23 +9,37 @@ Rectangle{
     property var rootItem: new TreeItem.TreeItem("", "", null)
     property var currentItem: null
 
-    property size iconSize: imageIcon.sourceSize
-    property font font: Qt.font({family:"Monaco", pointSize:16})
-
+    // ENUM: Selection Flag
     readonly property int selectionNone: TreeItem.SF_None
     readonly property int selectionCurrent: TreeItem.SF_Current
     readonly property int selectionSelected: TreeItem.SF_Selected
 
+    // The size of tree node icon. By default, this property has a value of Qt.size(14, 14).
+    property size iconSize: Qt.size(14, 14)
+    // The font of tree node text. By default, this property has a value of Qt.font({family:"Monaco", pointSize:16}).
+    property font font: Qt.font({family:"Monaco", pointSize:16})
+
+    // Stylesheet
+    // The backgroud color of the whole tree view panel. By default, this color is set to black
     readonly property color backgroundFill: Qt.rgba(33/255, 37/255, 43/255)
-    readonly property color backgroundNormal: Qt.rgba(0.0, 0.0, 0.0, 0.0)   // transparent
+    // The background color of tree nodes. By default, this color is set to transparent(which means showing the background of the tree view).
+    readonly property color backgroundNormal: Qt.rgba(0.0, 0.0, 0.0, 0.0)
+    // The foreground color of tree node text. By default, this color is set to pale.
     readonly property color foregroundNormal: Qt.rgba(151/255, 165/255, 180/255)
+    // The background color of hovered tree nodes. By default, this color is set to dark black.
     readonly property color backgroundHovered: Qt.rgba(44/255, 49/255, 58/255)
+    // The foreground color of hovered tree node text. By default, this color is set to white.
     readonly property color foregroundHovered: Qt.rgba(1.0, 1.0, 1.0)   // white
+    // The background color of the current tree node. By default, this color is set to dark black.
     readonly property color backgroundCurrent: Qt.rgba(24/255, 26/255, 31/255)
+    // The foreground color of the current tree node text. By default, this color is set to white.
     readonly property color foregroundCurrent: Qt.rgba(1.0, 1.0, 1.0)   // white
+    // The color of the flag which indicates the selected nodes. By default, this color is set to steel blue.
     readonly property color selectionFlagColor: Qt.rgba(86/255, 138/255, 242/255)
 
+    // The uri of expand icon resource. Or put the default icon resource into the directory same with TreeWidget.qml and use the default icon "btn_expand.png".
     readonly property string uriExpandIcon: "btn_expand.png"
+    // The uri of collapse icon resource. Or put the default icon resource into the directory same with TreeWidget.qml and use the default icon "btn_collapse.png".
     readonly property string uriCollapseIcon: "btn_collapse.png"
 
     implicitWidth: 200
