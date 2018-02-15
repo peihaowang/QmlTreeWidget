@@ -32,12 +32,12 @@ After you clone and import *TreeWidget* into your own project directory, you can
 
 ```
 TreeWidget{
-	id: tree
+    id: tree
     anchors.fill: parent
 
-	Component.onCompleted: {
-		// Initialization code
-	}
+    Component.onCompleted: {
+        // Initialization code
+    }
 }
 ```
 
@@ -45,15 +45,15 @@ You can customize the icon size and the font for your own tree view through the 
 
 ```
 TreeWidget{
-	id: tree
+    id: tree
     anchors.fill: parent
 
-	Component.onCompleted: {
-		tree.iconSize = (Qt.size(12, 12));
-		tree.font.family: "Monaco";
-		tree.font.pointSize: 16;
-		// ...
-	}
+    Component.onCompleted: {
+        tree.iconSize = (Qt.size(12, 12));
+        tree.font.family: "Monaco";
+        tree.font.pointSize: 16;
+        // ...
+    }
 }
 ```
 
@@ -73,7 +73,7 @@ TreeWidget{
         tree.font.family = "Monaco";
         tree.font.pointSize = 16;
 
-		tree.addTopLevelItem(tree.createItem("Item 2"));
+        tree.addTopLevelItem(tree.createItem("Item 2"));
         tree.addTopLevelItem(tree.createItem("Item 2"));
         tree.addTopLevelItem(tree.createItem("Item 3"));
     }
@@ -84,23 +84,23 @@ TreeWidget{
 
 ```
 TreeWidget{
-	id: tree
-	anchors.fill: parent
+    id: tree
+    anchors.fill: parent
 
-	Component.onCompleted: {
-	    iconSize = (Qt.size(12, 12));
-	    font.family = "Monaco";
-	    font.pointSize = 16;
+    Component.onCompleted: {
+        iconSize = (Qt.size(12, 12));
+        font.family = "Monaco";
+        font.pointSize = 16;
 
-	    var topItem1 = tree.createItem("Item 1");
-	    topItem1.appendChild(tree.createItem("Child 1"));
-	    topItem1.appendChild(tree.createItem("Child 2"));
-	    topItem1.appendChild(tree.createItem("Child 3"));
-	    tree.addTopLevelItem(topItem1);
+        var topItem1 = tree.createItem("Item 1");
+        topItem1.appendChild(tree.createItem("Child 1"));
+        topItem1.appendChild(tree.createItem("Child 2"));
+        topItem1.appendChild(tree.createItem("Child 3"));
+        tree.addTopLevelItem(topItem1);
 
-	    tree.addTopLevelItem(tree.createItem("Item 2"));
-	    tree.addTopLevelItem(tree.createItem("Item 3"));
-	}
+        tree.addTopLevelItem(tree.createItem("Item 2"));
+        tree.addTopLevelItem(tree.createItem("Item 3"));
+    }
 }
 ```
 
@@ -117,23 +117,23 @@ After getting a tree node, you call *setText(text)*, *setIcon(source)*, etc. met
 
 ```
 TreeWidget{
-	id: tree
-	anchors.fill: parent
+    id: tree
+    anchors.fill: parent
 
-	Component.onCompleted: {
-	    iconSize = (Qt.size(12, 12));
-	    font.family = "Monaco";
-	    font.pointSize = 16;
+    Component.onCompleted: {
+        iconSize = (Qt.size(12, 12));
+        font.family = "Monaco";
+        font.pointSize = 16;
 
-	    var topItem1 = tree.createItem("Item 1");
-	    topItem1.appendChild(tree.createItem("Child 1"));
-	    topItem1.appendChild(tree.createItem("Child 2"));
-	    topItem1.appendChild(tree.createItem("Child 3"));
-	    tree.addTopLevelItem(topItem1);
+        var topItem1 = tree.createItem("Item 1");
+        topItem1.appendChild(tree.createItem("Child 1"));
+        topItem1.appendChild(tree.createItem("Child 2"));
+        topItem1.appendChild(tree.createItem("Child 3"));
+        tree.addTopLevelItem(topItem1);
 
-	    tree.addTopLevelItem(tree.createItem("Item 2"));
-	    tree.addTopLevelItem(tree.createItem("Item 3"));
-	}
+        tree.addTopLevelItem(tree.createItem("Item 2"));
+        tree.addTopLevelItem(tree.createItem("Item 3"));
+    }
 }
 
 Button{
@@ -188,10 +188,20 @@ readonly property string uriCollapseIcon: "btn_collapse.png"
 
 Follow the instructions of comments, and set properties to customize your own style.
 
+Furthermore, you can also modify the source code of *TreeWidget.qml* and *TreeItem.js* to extend more functions or customize your own style, after you get familiar to the working mechanism of *TreeWidget.qml* and *TreeItem.js*.
+
 ## Support
+
 [Email to us](mailto:wangpeihao@gmail.com) for bug report and technical support.
 
+## Reference
+
+We referred to a project on CODE PROJECT to create the recursive tree model. We encapsulated the commonly used methods, polished the user interface, enhanced its performance, and also made it customizable.
+
+https://www.codeproject.com/Articles/632795/QML-TreeModel-and-TreeView
+
 ## Special Thanks
+
 1. [Wjj Software](http://www.wjjsoft.com).
 2. [The Qt Company Ltd.](http://www.qt.io/).
 3. [ShanghaiTech University](http://www.shanghaitech.edu.cn/).
