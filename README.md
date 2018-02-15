@@ -207,3 +207,4 @@ https://www.codeproject.com/Articles/632795/QML-TreeModel-and-TreeView
 1. [Wjj Software](http://www.wjjsoft.com).
 2. [The Qt Company Ltd.](http://www.qt.io/).
 3. [ShanghaiTech University](http://www.shanghaitech.edu.cn/).
+4. [Icons8](https://icons8.com)
