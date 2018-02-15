@@ -19,6 +19,7 @@ git clone git@github.com:peihaowang/TreeWidget.git
 Also, *TreeWidget* provides an example project, which is aimed to help you know how to use *TreeWidget* component. Check folder *example* for details.
 
 For development usage, you may need to copy the source code files and the resource files to your project directory, then you can import and use *TreeWidget* in your own project.
+
 **Note that, it is not recommended to import *TreeItem.js* to your own QML files, you should only use the interfaces provided by *TreeWidget*.**
 
 You may need to learn about [Qt Framework](http://doc.qt.io/qt-5/), [Qt Quick](http://doc.qt.io/qt-5/qtquick-index.html) and [Qt Creator](http://doc.qt.io/qtcreator/index.html) before you get started to *TreeWidget*.
@@ -111,6 +112,7 @@ Also, *takeTopLevelItem(item)* and *removeChild(item)* is provided to remove the
 *TreeWidget* provides *topLevelItem(index)* to get the top-level tree node through the *index* and *getCurrentItem()* method to get the currently selected node.
 
 For each tree node, you can call *childItem(index)* to get its child node through the *index*, and call *parent* to its parent node.
+
 **Note that: top-level nodes also have their parent node, called *root node*, which is different from the *QTreeWidget*.**
 
 After getting a tree node, you call *setText(text)*, *setIcon(source)*, etc. methods to modify the *TreeItem* display attributes:
