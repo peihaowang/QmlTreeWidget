@@ -1,31 +1,35 @@
 
-# TreeWidget
+# QmlTreeWidget
 
-## Introduction to TreeWidget
-*TreeWidget* is an open-source QML component, which provide convenient interfaces and customizable stylesheet, and also available for iOS and Android. Since Qt 5.5, Qt provides a component called TreeView for displaying tree hierarchy. However, TreeView is only available for desktop platform, and provides inconvenient interfaces. *TreeWidget* imitates the interfaces of QTreeWidget, providing *TreeItem* to help developers operate on each node in the tree. With *TreeWidget*, developers could add/remove/update tree nodes flexibly and dynamically through Javascript code. Also, the customizable palette of *TreeWidget* is available to developers.
+## Introduction to QmlTreeWidget
+
+*QmlTreeWidget* is an open-source QML component, which provide convenient interfaces and customizable stylesheet, and also available for iOS and Android. Since Qt 5.5, Qt provides a component called TreeView for displaying tree hierarchy. However, TreeView is only available for desktop platform, and provides inconvenient interfaces. *QmlTreeWidget* imitates the interfaces of QTreeWidget, providing *TreeItem* to help developers operate on each node in the tree. With *QmlTreeWidget*, developers could add/remove/update tree nodes flexibly and dynamically through Javascript code. Also, the customizable palette of *QmlTreeWidget* is available to developers.
 
 ## Commitment and Improvement
-*TreeWidget* is an open-source QML component released on Github community, thus, we encourage developers interested in this project to help us improve *TreeWidget*. We would appreciate your suggestions and implementation code.
+
+*QmlTreeWidget* is an open-source QML component released on Github community, thus, we encourage developers interested in this project to help us improve *QmlTreeWidget*. We would appreciate your suggestions and implementation code.
 [Contact us](mailto:wangpeihao@gmail.com) to let us know your ideas.
 
-## Download and Import *TreeWidget*
+## Download and Import QmlTreeWidget
 
-*TreeWidget* refers to a QML component for displaying tree hierarchy. It contains the source code files *TreeWidget.qml* and *TreeItem.js*, as well as the resource files *btn_expand.png*, *btn_expand@2x.png*(for high Dpi display), *btn_collapse.png*, *btn_collapse@2x.png*(for high Dpi display). You can use the following command to clone *TreeWidget* to your local.
+*QmlTreeWidget* refers to a QML component for displaying tree hierarchy. It contains the source code files *TreeWidget.qml* and *TreeItem.js*, as well as the resource files *btn_expand.png*, *btn_expand@2x.png*(for high Dpi display), *btn_collapse.png*, *btn_collapse@2x.png*(for high Dpi display). You can use the following command to clone *QmlTreeWidget* to your local.
 
 ```
-git clone git@github.com:peihaowang/TreeWidget.git
+git clone git@github.com:peihaowang/QmlTreeWidget.git
 ```
 
-Also, *TreeWidget* provides an example project, which is aimed to help you know how to use *TreeWidget* component. Check folder *example* for details.
+Also, *QmlTreeWidget* provides an example project, which is aimed to help you know how to use *QmlTreeWidget* component. Check folder *example* for details.
 
-For development usage, you may need to copy the source code files and the resource files to your project directory, then you can import and use *TreeWidget* in your own project.
+For development usage, you may need to copy the source code files and the resource files to your project directory, then you can import and use *QmlTreeWidget* in your own project.
 
-**Note that, it is not recommended to import *TreeItem.js* to your own QML files, you should only use the interfaces provided by *TreeWidget*.**
+**Note that, it is not recommended to import *TreeItem.js* to your own QML files, you should only use the interfaces provided by *QmlTreeWidget*.**
 
-You may need to learn about [Qt Framework](http://doc.qt.io/qt-5/), [Qt Quick](http://doc.qt.io/qt-5/qtquick-index.html) and [Qt Creator](http://doc.qt.io/qtcreator/index.html) before you get started to *TreeWidget*.
+You may need to learn about [Qt Framework](http://doc.qt.io/qt-5/), [Qt Quick](http://doc.qt.io/qt-5/qtquick-index.html) and [Qt Creator](http://doc.qt.io/qtcreator/index.html) before you get started to *QmlTreeWidget*.
+
+**Note that, although the name of repository and project is *QmlTreeWidget*, but the component inside is named *TreeWidget*, thus, you should use *TreeWidget* as the component name in your own project, instead of *QmlTreeWidget*.**
 
 
-## How to Use *TreeWidget*
+## How to Use *QmlTreeWidget*
 
 ### Initialize *TreeWidget*
 
