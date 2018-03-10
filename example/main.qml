@@ -9,7 +9,7 @@ ApplicationWindow {
     visible: true
     width: 640
     height: 480
-    title: "Hello World"
+    title: "QmlTreeWidget Example"
 
     readonly property string iconName: "ico_item.png"
 

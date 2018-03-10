@@ -7,7 +7,7 @@ import QtQuick.Controls 1.4
 ApplicationWindow {
     id: window
     visible: true
-    title: "Hello World"
+    title: "QmlTreeWidget Example"
 
     TreeWidget{
         id: tree
