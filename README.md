@@ -5,7 +5,9 @@
 
 *QmlTreeWidget* is an open-source QML component, which provide convenient interfaces and customizable stylesheet, and also available for iOS and Android. Since Qt 5.5, Qt provides a component called TreeView for displaying tree hierarchy. However, TreeView is only available for desktop platform, and provides inconvenient interfaces. *QmlTreeWidget* imitates the interfaces of QTreeWidget, providing *TreeItem* to help developers operate on each node in the tree. With *QmlTreeWidget*, developers could add/remove/update tree nodes flexibly and dynamically through Javascript code. Also, the customizable palette of *QmlTreeWidget* is available to developers.
 
-## Commitment and Improvement
+![Screenshot working on iOS](ScreenShot.png)
+
+## Contribution and Improvement
 
 *QmlTreeWidget* is an open-source QML component released on Github community, thus, we encourage developers interested in this project to help us improve *QmlTreeWidget*. We would appreciate your suggestions and implementation code.
 [Contact us](mailto:wangpeihao@gmail.com) to let us know your ideas.
@@ -206,7 +208,7 @@ We referred to a project on CODE PROJECT to create the recursive tree model. We 
 
 https://www.codeproject.com/Articles/632795/QML-TreeModel-and-TreeView
 
-## Special Thanks
+## Acknowledgement
 
 1. [Wjj Software](http://www.wjjsoft.com).
 2. [The Qt Company Ltd.](http://www.qt.io/).
