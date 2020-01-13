@@ -274,7 +274,6 @@ Rectangle{
 
         contentWidth: contentItem.childrenRect.width;
         flickableDirection: Flickable.HorizontalAndVerticalFlick
-//        boundsBehavior: Flickable.StopAtBounds
 
         Component.onCompleted: {
             rootItem.setExpanded(true);
