@@ -1,4 +1,4 @@
-import QtQuick 2.0
+import QtQuick 2.13
 import QtQuick.Controls 2.3
 import "TreeItem.js" as TreeItem
 
@@ -55,19 +55,49 @@ Rectangle{
     Component{
         id: delegateRoot
         Column{
+            width: calculateWidth()
             Repeater{
+                id: repeaterFirstLevelNodes
                 model: subNodes
                 delegate: delegateItems
+            }
+
+            function calculateWidth(){
+                var w = 0;
+                for(var i = 0; i < repeaterFirstLevelNodes.count; i++) {
+                    var child = repeaterFirstLevelNodes.itemAt(i)
+                    if(w < child.widthHint){
+                        w = child.widthHint;
+                    }
+                }
+                return w;
             }
         }
     }
 
     Component{
         id: delegateItems
+
         Column{
+
+            property int widthHint: calculateWidth()
+
+            function calculateWidth(){
+                var w = Math.max(listView.width, itemRow.implicitWidth + 10);
+                if(expanded){
+                    for(var i = 0; i < repeaterSubNodes.count; i++) {
+                        var child = repeaterSubNodes.itemAt(i)
+                        if(w < child.widthHint){
+                            w = child.widthHint;
+                        }
+                    }
+                }
+                return w;
+            }
+
             Rectangle{
                 id: itemRect
-                width: listView.width
+                width: listView.contentWidth
                 height: itemRow.implicitHeight + 6
 
                 color: (selectionFlag == TreeItem.SF_Current) ? backgroundCurrent : backgroundNormal
@@ -196,12 +226,14 @@ Rectangle{
             }
 
             Item{
+                id: itemSubNodes
                 visible: expanded
-                width: repeaterSubNodes.implicitWidth
-                height: repeaterSubNodes.implicitHeight
+                width: colSubNodes.implicitWidth
+                height: colSubNodes.implicitHeight
                 Column{
-                    id: repeaterSubNodes
+                    id: colSubNodes
                     Repeater {
+                        id: repeaterSubNodes
                         model: subNodes
                         delegate: delegateItems
                     }
@@ -239,6 +271,10 @@ Rectangle{
         anchors.fill: parent
         model: listModel
         delegate: delegateRoot
+
+        contentWidth: contentItem.childrenRect.width;
+        flickableDirection: Flickable.HorizontalAndVerticalFlick
+//        boundsBehavior: Flickable.StopAtBounds
 
         Component.onCompleted: {
             rootItem.setExpanded(true);

@@ -59,8 +59,6 @@ ApplicationWindow {
 
             Rectangle{
 
-                anchors.left: parent.left
-                anchors.right: parent.right
                 height: inputName.height
 
                 color: "lightGray"
