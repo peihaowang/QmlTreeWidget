@@ -10,7 +10,7 @@
 ## Contribution and Improvement
 
 *QmlTreeWidget* is an open-source QML component released on Github community, thus, we encourage developers interested in this project to help us improve *QmlTreeWidget*. We would appreciate your suggestions and implementation code.
-[Contact us](mailto:wangpeihao@gmail.com) to let us know your ideas.
+[Contact us](mailto:wangpeihao@gmail.com) or open an issue to let us know your questions and ideas.
 
 ## Download and Import QmlTreeWidget
 
@@ -68,7 +68,7 @@ TreeWidget{
 
 ### Create Tree Hierarchy
 
-To initialize *TreeWidget*, you could create items through *createItem(text, icon, parent)* method, and add nodes to the root node through *addTopLevelItem(item)* method:
+To initialize *TreeWidget*, you could create items through `createItem(text, icon, parent)` method, and add nodes to the root node through `addTopLevelItem(item)` method:
 
 ```
 TreeWidget{
@@ -87,7 +87,7 @@ TreeWidget{
 }
 ```
 
-*createItem(text, icon, parent)* will return a newly created tree node, and you can add child nodes to it to create tree hierarchy through *appendChild(item)* method:
+`createItem(text, icon, parent)` will return a newly created tree node, and you can add child nodes to it to create tree hierarchy through `appendChild(item)` method:
 
 ```
 TreeWidget{
@@ -111,17 +111,17 @@ TreeWidget{
 }
 ```
 
-Also, *takeTopLevelItem(item)* and *removeChild(item)* is provided to remove the node from the tree.
+Also, `takeTopLevelItem(item)` and `removeChild(item)` is provided to remove the node from the tree.
 
 ### Update and Operate on *TreeItem*
 
-*TreeWidget* provides *topLevelItem(index)* to get the top-level tree node through the *index* and *getCurrentItem()* method to get the currently selected node.
+*TreeWidget* provides `topLevelItem(index)` to get the top-level tree node through the `index` and `getCurrentItem()` method to get the currently selected node.
 
-For each tree node, you can call *childItem(index)* to get its child node through the *index*, and call *parent* to its parent node.
+For each tree node, you can call `childItem(index)` to get its child node through the `index`, and call `parent` to get its parent node.
 
 **Note that: top-level nodes also have their parent node, called *root node*, which is different from the *QTreeWidget*.**
 
-After getting a tree node, you call *setText(text)*, *setIcon(source)*, etc. methods to modify the *TreeItem* display attributes:
+After getting a tree node, you call `setText(text)`, `setIcon(source)`, etc. methods to modify the `TreeItem` display attributes:
 
 ```
 TreeWidget{
@@ -198,10 +198,6 @@ Follow the instructions of comments, and set properties to customize your own st
 
 Furthermore, you can also modify the source code of *TreeWidget.qml* and *TreeItem.js* to extend more functions or customize your own style, after you get familiar to the working mechanism of *TreeWidget.qml* and *TreeItem.js*.
 
-## Support
-
-[Email to us](mailto:wangpeihao@gmail.com) for bug report and technical support.
-
 ## Reference
 
 We referred to a project on CODE PROJECT to create the recursive tree model. We encapsulated the commonly used methods, polished the user interface, enhanced its performance, and also made it customizable.
@@ -212,5 +208,4 @@ https://www.codeproject.com/Articles/632795/QML-TreeModel-and-TreeView
 
 1. [Wjj Software](http://www.wjjsoft.com).
 2. [The Qt Company Ltd.](http://www.qt.io/).
-3. [ShanghaiTech University](http://www.shanghaitech.edu.cn/).
 4. [Icons8](https://icons8.com)
